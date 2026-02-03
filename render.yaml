@@ -10,6 +10,8 @@ services:
         value: production
       - key: PORT
         value: 10000
+      - key: RENDER_ROOT_DIR
+        value: /opt/render/project/src/
       - key: DATABASE_URL
         fromDatabase:
           name: find-my-family-db
