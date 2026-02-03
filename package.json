@@ -7,9 +7,7 @@
     "start": "node dist/index.js",
     "dev": "nodemon --exec node --loader ts-node/esm src/index.ts",
     "build": "tsc",
-    "postinstall": "npm run build || echo 'Build failed in postinstall, will be handled by buildCommand'",
-    "db:init": "psql $DATABASE_URL -f schema.sql",
-    "verify": "node -e \"import('./dist/index.js').then(() => console.log('Build verified')).catch(e => { console.error('Build verification failed:', e); process.exit(1); })\"",
+    "postinstall": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
