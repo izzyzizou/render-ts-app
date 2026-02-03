@@ -11,6 +11,19 @@ import geofenceRoutes from './routes/geofenceRoutes.js';
 
 dotenv.config();
 
+// Validate required environment variables
+if (!process.env.JWT_SECRET) {
+  console.error('ERROR: JWT_SECRET environment variable is not set!');
+  console.error('This is required for authentication. Please set it in your environment variables.');
+  process.exit(1);
+}
+
+if (!process.env.DATABASE_URL) {
+  console.error('ERROR: DATABASE_URL environment variable is not set!');
+  console.error('This is required for database connections. Please set it in your environment variables.');
+  process.exit(1);
+}
+
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {

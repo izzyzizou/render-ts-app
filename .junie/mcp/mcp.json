@@ -1,18 +1,10 @@
 {
     "mcpServers": {
-        "Render": {
-            "type": "com.intellij.ml.llm.matterhorn.core.mcp.McpServerConfiguration.McpServerCommand",
-            "name": "Render",
-            "command": "npx",
-            "args": [
-                "-y",
-                "@render-oss/mcp-server-render"
-            ],
-            "env": {
-                "RENDER_API_KEY": "Here is the API Key: rnd_FGtKIS9fismHyCmS954wRCoLRsE7"
-            },
-            "sourcePath": "/Users/izzat/git/find-my-family-backend/.junie/mcp/mcp.json",
-            "enabled": true
+        "render": {
+            "url": "https://mcp.render.com/mcp",
+            "headers": {
+                "Authorization": "Bearer rnd_Jl3znNuW0ghnQvQgDH0h6Sf2P12X"
+            }
         }
     }
 }
