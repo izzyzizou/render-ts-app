@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: find-my-family-backend
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DATABASE_URL
+        fromDatabase:
+          name: find-my-family-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+
+databases:
+  - name: find-my-family-db
+    plan: free
+    databaseName: family_location_db
+    user: family_admin
