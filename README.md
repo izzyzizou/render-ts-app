@@ -108,3 +108,5 @@ This project is configured for easy deployment to **Render** using a `render.yam
 
 - **Join Family Room**: Emit `join-family` with `familyId` to start receiving updates for that family.
 - **Location Updates**: Clients in the family room receive `location-update` events with the latest coordinates.
+
+Testing purposes
