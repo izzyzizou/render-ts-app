@@ -11,8 +11,7 @@
     "prestart": "echo '--- CURRENT DIRECTORY ---' && pwd && echo '--- ROOT LISTING ---' && ls -la && echo '--- DIST LISTING ---' && (ls -la dist || echo 'dist not found') && echo '--- SRC LISTING ---' && ls -la src && echo '--- END DEBUG ---'",
     "dev": "nodemon --exec node --loader ts-node/esm src/index.ts",
     "build": "rm -rf dist && tsc",
-    "postinstall": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "npm run build"
   },
   "keywords": [],
   "author": "",
